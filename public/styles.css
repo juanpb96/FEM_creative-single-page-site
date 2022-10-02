@@ -1,0 +1,11 @@
+body {
+    background-color: aliceblue;
+}body .title {
+        color: blue;
+    }
+
+@media (min-width: 1024px) {
+    ul {
+        list-style-type: none;       
+    }
+}
