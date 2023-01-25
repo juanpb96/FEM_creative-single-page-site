@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-    <link rel="stylesheet" href="styles.css">
-    
-    <title>Frontend Mentor | Creative single page site</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./script.js" defer></script>
+  
+  <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body>
-  About
-  Service
-  Projects
+  <header class="flex justify-between items-center relative px-6 py-10">
+    <img src="../assets/desktop/logo.svg" alt="">
 
-  Schedule a call
+    <button
+      type="button"
+      class="hamburger w-6 h-[18px]"
+      aria-label="Navigation Menu"
+      aria-haspopup="true"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+    >
+      <span class="hamburger-box" role="presentation">
+        <div class="hamburger-inner relative w-6 h-0.5 bg-black opacity-50">
+          <div class="absolute top-[-6px] w-6 h-0.5 bg-black"></div>
+          <div class="absolute bottom-[-6px] w-6 h-0.5 bg-black"></div>
+        </div>
+      </span>
+    </button>
+
+    <nav id="nav-menu" class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black sm:hidden" role="menu">
+      <ul class="flex flex-col items-center gap-6 text-white pt-8 px-[26px] pb-7">
+        <li role="menuitem" tabindex="0">About</li>
+        <li role="menuitem" tabindex="0">Service</li>
+        <li role="menuitem" tabindex="0">Projects</li>
+        <li class="px-11 py-[22px] font-extrabold bg-primary-red" role="menuitem" tabindex="0">Schedule a Call</li>
+      </ul>
+    </nav>
+  </header>
 
   Branding & website design agency
 
