@@ -510,10 +510,6 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
-.invisible{
-  visibility: hidden;
-}
-
 .absolute{
   position: absolute;
 }
@@ -538,6 +534,35 @@ html {
   right: 1.5rem;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
+.mb-\[15px\]{
+  margin-bottom: 15px;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
+}
+
+.ml-6{
+  margin-left: 1.5rem;
+}
+
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -560,6 +585,10 @@ html {
 
 .w-6{
   width: 1.5rem;
+}
+
+.max-w-mobile{
+  max-width: calc(100% - 24px * 2);
 }
 
 @keyframes opacity-100{
@@ -648,6 +677,11 @@ html {
   padding-bottom: 22px;
 }
 
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
@@ -656,8 +690,25 @@ html {
   padding-bottom: 1.75rem;
 }
 
+.text-\[2\.5rem\]{
+  font-size: 2.5rem;
+}
+
+.text-base{
+  font-size: 15px;
+  line-height: 25px;
+}
+
 .font-extrabold{
   font-weight: 800;
+}
+
+.font-normal{
+  font-weight: 400;
+}
+
+.leading-10{
+  line-height: 2.5rem;
 }
 
 .text-white{
@@ -669,18 +720,22 @@ html {
   opacity: 0.5;
 }
 
-.opacity-0{
-  opacity: 0;
+.hover\:bg-active-red:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 147, 147, var(--tw-bg-opacity));
 }
 
-.opacity-100{
-  opacity: 1;
+.hover\:opacity-70:hover{
+  opacity: 0.7;
 }
 
-.transition-opacity{
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.focus\:bg-active-red:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 147, 147, var(--tw-bg-opacity));
+}
+
+.focus\:opacity-70:focus{
+  opacity: 0.7;
 }
 
 @media (min-width: 640px){

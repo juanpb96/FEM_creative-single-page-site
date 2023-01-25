@@ -8,7 +8,17 @@ module.exports = {
           black: '#191921',
           red: '#F94F4F'
         },
+        'active': {
+          black: '#434356',
+          red: '#FF9393'
+        },
         white: '#FFFFFF'
+      },
+      maxWidth: {
+        'mobile': 'calc(100% - 24px * 2)'
+      },
+      fontSize: {
+        base: ['15px', '25px']
       },
       keyframes: {
         'opacity-100': {
