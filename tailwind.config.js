@@ -18,7 +18,8 @@ module.exports = {
         'mobile': 'calc(100% - 24px * 2)'
       },
       fontSize: {
-        base: ['15px', '25px']
+        base: ['15px', '25px'],
+        'lg': ['32px', '40px']
       },
       keyframes: {
         'opacity-100': {

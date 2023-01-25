@@ -534,6 +534,30 @@ html {
   right: 1.5rem;
 }
 
+.bottom-\[9px\]{
+  bottom: 9px;
+}
+
+.bottom-\[-9px\]{
+  bottom: -9px;
+}
+
+.bottom-\[-10px\]{
+  bottom: -10px;
+}
+
+.bottom-3\.5{
+  bottom: 0.875rem;
+}
+
+.bottom-3{
+  bottom: 0.75rem;
+}
+
+.left-6{
+  left: 1.5rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -559,6 +583,26 @@ html {
   margin-left: 1.5rem;
 }
 
+.mt-\[4\.5rem\]{
+  margin-top: 4.5rem;
+}
+
+.mb-\[4\.5rem\]{
+  margin-bottom: 4.5rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-2\.5{
+  margin-top: 0.625rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .block{
   display: block;
 }
@@ -569,6 +613,10 @@ html {
 
 .hidden{
   display: none;
+}
+
+.aspect-auto{
+  aspect-ratio: auto;
 }
 
 .h-\[18px\]{
@@ -583,8 +631,24 @@ html {
   height: 0px;
 }
 
+.h-7{
+  height: 1.75rem;
+}
+
+.h-\[29px\]{
+  height: 29px;
+}
+
 .w-6{
   width: 1.5rem;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.w-\[63px\]{
+  width: 63px;
 }
 
 .max-w-mobile{
@@ -652,6 +716,14 @@ html {
   background-color: rgba(249, 79, 79, var(--tw-bg-opacity));
 }
 
+.bg-inherit{
+  background-color: inherit;
+}
+
+.bg-current{
+  background-color: currentColor;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -699,6 +771,11 @@ html {
   line-height: 25px;
 }
 
+.text-lg{
+  font-size: 32px;
+  line-height: 40px;
+}
+
 .font-extrabold{
   font-weight: 800;
 }
@@ -711,9 +788,18 @@ html {
   line-height: 2.5rem;
 }
 
+.leading-\[1\.125rem\]{
+  line-height: 1.125rem;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.text-primary-red{
+  --tw-text-opacity: 1;
+  color: rgba(249, 79, 79, var(--tw-text-opacity));
 }
 
 .opacity-50{
@@ -725,6 +811,11 @@ html {
   background-color: rgba(255, 147, 147, var(--tw-bg-opacity));
 }
 
+.hover\:text-active-red:hover{
+  --tw-text-opacity: 1;
+  color: rgba(255, 147, 147, var(--tw-text-opacity));
+}
+
 .hover\:opacity-70:hover{
   opacity: 0.7;
 }
@@ -732,6 +823,11 @@ html {
 .focus\:bg-active-red:focus{
   --tw-bg-opacity: 1;
   background-color: rgba(255, 147, 147, var(--tw-bg-opacity));
+}
+
+.focus\:text-active-red:focus{
+  --tw-text-opacity: 1;
+  color: rgba(255, 147, 147, var(--tw-text-opacity));
 }
 
 .focus\:opacity-70:focus{
