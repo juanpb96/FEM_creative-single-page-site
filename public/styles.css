@@ -534,28 +534,16 @@ html {
   right: 1.5rem;
 }
 
-.bottom-\[9px\]{
-  bottom: 9px;
-}
-
-.bottom-\[-9px\]{
-  bottom: -9px;
-}
-
-.bottom-\[-10px\]{
-  bottom: -10px;
-}
-
-.bottom-3\.5{
-  bottom: 0.875rem;
-}
-
-.bottom-3{
-  bottom: 0.75rem;
-}
-
 .left-6{
   left: 1.5rem;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.left-0{
+  left: 0px;
 }
 
 .mx-auto{
@@ -583,16 +571,20 @@ html {
   margin-left: 1.5rem;
 }
 
-.mt-\[4\.5rem\]{
-  margin-top: 4.5rem;
+.mt-\[-0\.875rem\]{
+  margin-top: -0.875rem;
 }
 
-.mb-\[4\.5rem\]{
-  margin-bottom: 4.5rem;
+.mt-\[3\.625rem\]{
+  margin-top: 3.625rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mb-\[4\.5rem\]{
+  margin-bottom: 4.5rem;
 }
 
 .mt-2\.5{
@@ -601,6 +593,26 @@ html {
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-\[3\.125rem\]{
+  margin-top: 3.125rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
+}
+
+.mb-16{
+  margin-bottom: 4rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .block{
@@ -631,12 +643,12 @@ html {
   height: 0px;
 }
 
-.h-7{
-  height: 1.75rem;
-}
-
 .h-\[29px\]{
   height: 29px;
+}
+
+.h-\[5\.5rem\]{
+  height: 5.5rem;
 }
 
 .w-6{
@@ -653,6 +665,10 @@ html {
 
 .max-w-mobile{
   max-width: calc(100% - 24px * 2);
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes opacity-100{
@@ -701,6 +717,14 @@ html {
   gap: 1.5rem;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -714,10 +738,6 @@ html {
 .bg-primary-red{
   --tw-bg-opacity: 1;
   background-color: rgba(249, 79, 79, var(--tw-bg-opacity));
-}
-
-.bg-inherit{
-  background-color: inherit;
 }
 
 .bg-current{
@@ -754,12 +774,30 @@ html {
   padding-bottom: 1.5rem;
 }
 
+.py-\[6rem\]{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
 
 .pb-7{
   padding-bottom: 1.75rem;
+}
+
+.pt-11{
+  padding-top: 2.75rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
 }
 
 .text-\[2\.5rem\]{
@@ -774,6 +812,11 @@ html {
 .text-lg{
   font-size: 32px;
   line-height: 40px;
+}
+
+.text-2xl{
+  font-size: 80px;
+  line-height: 88px;
 }
 
 .font-extrabold{
@@ -804,6 +847,10 @@ html {
 
 .opacity-50{
   opacity: 0.5;
+}
+
+.opacity-25{
+  opacity: 0.25;
 }
 
 .hover\:bg-active-red:hover{
