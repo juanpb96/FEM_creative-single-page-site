@@ -518,6 +518,18 @@ html {
   position: relative;
 }
 
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.inset-x-0{
+  left: 0px;
+  right: 0px;
+}
+
 .top-\[-6px\]{
   top: -6px;
 }
@@ -544,6 +556,18 @@ html {
 
 .left-0{
   left: 0px;
+}
+
+.right-8{
+  right: 2rem;
+}
+
+.bottom-9{
+  bottom: 2.25rem;
+}
+
+.bottom-0{
+  bottom: 0px;
 }
 
 .mx-auto{
@@ -595,24 +619,20 @@ html {
   margin-top: 0.5rem;
 }
 
-.mt-4{
-  margin-top: 1rem;
-}
-
 .mt-\[3\.125rem\]{
   margin-top: 3.125rem;
 }
 
-.mt-16{
-  margin-top: 4rem;
-}
-
-.mb-16{
-  margin-bottom: 4rem;
+.mt-4{
+  margin-top: 1rem;
 }
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
 }
 
 .block{
@@ -645,10 +665,6 @@ html {
 
 .h-\[29px\]{
   height: 29px;
-}
-
-.h-\[5\.5rem\]{
-  height: 5.5rem;
 }
 
 .w-6{
@@ -744,6 +760,10 @@ html {
   background-color: currentColor;
 }
 
+.bg-image-gradient{
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -779,9 +799,19 @@ html {
   padding-bottom: 6rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-9{
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.py-\[6\.25rem\]{
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
 }
 
 .pt-8{
@@ -798,6 +828,18 @@ html {
 
 .pl-4{
   padding-left: 1rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-\[2\.5rem\]{
@@ -851,6 +893,10 @@ html {
 
 .opacity-25{
   opacity: 0.25;
+}
+
+.mix-blend-normal{
+  mix-blend-mode: normal;
 }
 
 .hover\:bg-active-red:hover{

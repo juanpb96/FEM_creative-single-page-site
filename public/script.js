@@ -20,19 +20,29 @@ const toggleMenuClick = () => {
     toggleMenu();
 };
 
-const toggleMenuKeyDown = (e) => {
+const buttonKeyDown = (e, cb, type = "button") => {
     const key = e.key;
-    console.log({ key });
-
-    if (![' ', 'Enter', 'ArrowDown', 'Down'].includes(key)) {
-        return;
+    
+    switch (type) {
+        case 'button':
+            if (![' ', 'Enter'].includes(key)) {
+                return;
+            }
+            break;
+        case 'combobox':
+            if (![' ', 'Enter', 'ArrowDown', 'Down'].includes(key)) {
+                return;
+            }
+            break;
+        default:
+            return;
     }
 
-    toggleMenu();
+    cb();
 };
 
 hamburgerButton.addEventListener('mousedown', toggleMenuClick);
-hamburgerButton.addEventListener('keydown', toggleMenuKeyDown);
+hamburgerButton.addEventListener('keydown', (e) => buttonKeyDown(e, toggleMenuClick, 'combobox'));
 
 navMenu.addEventListener('animationend', () => {
     if (isMenuOpen) {
@@ -43,3 +53,36 @@ navMenu.addEventListener('animationend', () => {
         navMenu.classList.remove('animate-opacity-100');
     }
 });
+
+const carousel = document.getElementById('carousel');
+const carouselLength = carousel.children.length;
+let currentSlide = 0;
+
+const carouselControls = document.getElementById('carousel-controls');
+const previousButton = carouselControls.children[0];
+const nextButton = carouselControls.children[1];
+
+const changeCarouselSlide = (direction) => {
+    return () => {
+        carousel.children[currentSlide].classList.add('hidden');
+
+        if (currentSlide + direction < 0) {
+            currentSlide = carouselLength - 1;
+        } else if (currentSlide + direction >= carouselLength) {
+            currentSlide = 0;
+        } else {
+            currentSlide += direction; 
+        }
+
+        carousel.children[currentSlide].classList.remove('hidden');
+    };
+};
+
+const previousSlide = changeCarouselSlide(-1);
+const nextSlide = changeCarouselSlide(1);
+
+previousButton.addEventListener('mousedown', previousSlide);
+previousButton.addEventListener('keydown', (e) => buttonKeyDown(e, previousSlide, 'button'));
+
+nextButton.addEventListener('mousedown', nextSlide);
+nextButton.addEventListener('keydown', (e) => buttonKeyDown(e, nextSlide, 'button'));

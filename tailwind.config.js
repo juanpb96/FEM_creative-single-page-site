@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'image-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);'
+      },
       colors: {
         primary: {
           black: '#191921',

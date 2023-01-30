@@ -148,67 +148,126 @@
       </ol>
     </section>    
   
-    <section class="bg-primary-black text-white">
-      <ul>
-        <li>
-          <figure>
-            <img src="./assets/mobile/image-slide-1.jpg" alt="">
-            <figcaption>
-              <strong>Lean Product Roadmap </strong>
-              2019 project
+    <section class="bg-primary-black text-white" aria-roledescription="Carousel" aria-label="Our Projects">
+      <!-- TODO: Continue with https://www.w3.org/WAI/ARIA/apg/example-index/carousel/carousel-1-prev-next.html -->
+      <ul id="carousel" aria-live="polite">
+        <li
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 of 3"
+          class="animate-opacity-100"
+        >
+          <figure class="relative">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/mobile/image-slide-1.jpg"
+              alt=""
+            >
+
+            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
+              <strong class="font-extrabold">Lean Product Roadmap</strong>
+              2019 Project
             </figcaption>
           </figure>
 
-          <div class="py-16 mx-auto max-w-mobile">
-            <h2 class="mb-6 font-extrabold text-lg">
-              Brand naming & guidelines
-            </h2>
-
-            <div class="flex gap-4">
-              <button
-                aria-label="Previous"
-                type="button"
-                class=""
-              >
-                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                  <g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd">
-                    <circle cx="20" cy="20" r="19.5"/>
-                    <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
-                  </g>
-                </svg>
-              </button>
-  
-              <button
-                aria-label="Next"
-                type="button"
-                class=""
-              >
-                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                  <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
-                    <circle cx="20" cy="20" r="19.5"/>
-                    <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
-                  </g>
-                </svg>
-              </button>
-            </div>
-          </div>
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+            Brand naming & guidelines
+          </h2>
         </li>
-        <li></li>
-        <li></li>
+        
+        <li
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 of 3"
+          class="hidden animate-opacity-100"
+        >
+          <figure class="relative">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/mobile/image-slide-2.jpg"
+              alt=""
+            >
+
+            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
+              <strong class="font-extrabold">New Majestic Hotel</strong>
+              2018 Project
+            </figcaption>
+          </figure>
+
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+            Brand identity & merchandise
+          </h2>
+        </li>
+
+        <li
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 of 3"
+          class="hidden animate-opacity-100"
+        >
+          <figure class="relative">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/mobile/image-slide-3.jpg"
+              alt=""
+            >
+
+            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
+              <strong class="font-extrabold">Crypto Dashboard</strong>
+              2016 Project
+            </figcaption>
+          </figure>
+
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+            Brand identity & web design
+          </h2>
+        </li>
+
       </ul>
+
+      <div id="carousel-controls" class="flex gap-4 pb-16 ml-6 max-w-mobile">
+        <button
+          aria-controls="carousel"
+          aria-label="Previous Slide"
+          type="button"
+          class="text-primary-red hover:text-active-red focus:text-active-red"
+        >
+          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <g transform="matrix(-1 0 0 1 40 0)" stroke="currentColor" fill="none" fill-rule="evenodd">
+              <circle cx="20" cy="20" r="19.5"/>
+              <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+            </g>
+          </svg>
+        </button>
+
+        <button
+          aria-controls="carousel"
+          aria-label="Next Slide"
+          type="button"
+          class="text-primary-red hover:text-active-red focus:text-active-red"
+        >
+          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <g stroke="currentColor" fill="none" fill-rule="evenodd">
+              <circle cx="20" cy="20" r="19.5"/>
+              <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+            </g>
+          </svg>
+        </button>
+      </div>
     </section>
-  
-    Brand identity & merchandise
-    New Majestic Hotel 
-    2018 Project
     
-    Brand identity & web design
-    Crypto Dashboard
-    2016 Project
-  
-    Let's build something great together.
-  
-    Schedule a Call
+    <footer class="py-[6.25rem] mx-auto max-w-mobile">
+      <h2 class="mb-12 font-extrabold text-lg">
+        Let's build something great together.
+      </h2>
+
+      <button
+        type="button"
+        class="block px-11 py-6 font-extrabold text-white bg-primary-red hover:bg-active-red focus:bg-active-red"
+      >
+        Schedule a Call
+      </button>
+    </footer>
   </main>
 </body>
 </html>
