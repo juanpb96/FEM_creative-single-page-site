@@ -18,7 +18,8 @@ module.exports = {
         white: '#FFFFFF'
       },
       maxWidth: {
-        'mobile': 'calc(100% - 24px * 2)'
+        'mobile': 'calc(100% - 24px * 2)',
+        'desktop': '1110px'
       },
       fontSize: {
         base: ['15px', '25px'],

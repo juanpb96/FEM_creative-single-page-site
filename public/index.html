@@ -10,13 +10,13 @@
   
   <title>Frontend Mentor | Creative single page site</title>
 </head>
-<body>
-  <header class="flex justify-between items-center relative px-6 py-10">
+<body class="overflow-x-hidden">
+  <header class="flex justify-between items-center max-w-desktop mx-auto relative px-6 py-10 md:p-0 md:pl-10 xl:p-0">
     <img src="./assets/desktop/logo.svg" alt="">
 
     <button
       type="button"
-      class="hamburger w-6 h-[18px]"
+      class="hamburger w-6 h-[18px] md:hidden"
       aria-label="Navigation Menu"
       aria-haspopup="true"
       aria-controls="nav-menu"
@@ -30,13 +30,50 @@
       </span>
     </button>
 
-    <nav id="nav-menu" class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black sm:hidden" role="menu">
-      <ul class="flex flex-col items-center gap-6 text-white pt-8 px-[26px] pb-7">
-        <li role="menuitem" tabindex="0" class="hover:opacity-70 focus:opacity-70">About</li>
-        <li role="menuitem" tabindex="0" class="hover:opacity-70 focus:opacity-70">Service</li>
-        <li role="menuitem" tabindex="0" class="hover:opacity-70 focus:opacity-70">Projects</li>
+    <nav
+      id="nav-menu"
+      class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black
+            md:inline-block md:animate-none md:relative md:right-0 md:bg-primary-red"
+      role="menu"
+    >
+      <div class="hidden inset-0 bg-primary-red z-[-1] w-screen lg:block lg:absolute"></div>
+      <ul class="flex flex-col items-center gap-6 text-white pt-8 px-[1.625rem] pb-7 
+                md:flex-row md:gap-5 md:py-[3.5625rem] md:pl-8 md:pr-10
+                lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-0">
         <li
-          class="px-11 py-[22px] font-extrabold bg-primary-red hover:bg-active-red focus:bg-active-red"
+          role="menuitem"
+          tabindex="0"
+          class="cursor-pointer hover:opacity-70 focus:opacity-70
+                md:hover:opacity-100 md:focus:opacity-100
+                md:hover:font-extrabold md:focus:font-extrabold"
+        >
+          About
+          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">About</span>
+        </li>
+        <li
+          role="menuitem"
+          tabindex="0"
+          class="cursor-pointer hover:opacity-70 focus:opacity-70
+                md:hover:opacity-100 md:focus:opacity-100
+                md:hover:font-extrabold md:focus:font-extrabold"
+        >
+          Service
+          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">Service</span>
+        </li>
+        <li
+          role="menuitem"
+          tabindex="0"
+          class="cursor-pointer hover:opacity-70 focus:opacity-70
+                md:hover:opacity-100 md:focus:opacity-100
+                md:hover:font-extrabold md:focus:font-extrabold"
+        >
+          Projects
+          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">Projects</span>
+        </li>
+        <li
+          class="cursor-pointer px-11 py-[1.375rem] font-extrabold bg-primary-red hover:bg-active-red focus:bg-active-red
+                md:ml-2 md:leading-5 md:px-[1.125rem] md:bg-primary-black md:hover:bg-active-black md:focus:bg-active-black
+                lg:px-11 lg:py-[1.375rem]"
           role="menuitem"
           tabindex="0"
         >
