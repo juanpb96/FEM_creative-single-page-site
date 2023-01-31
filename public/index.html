@@ -32,7 +32,7 @@
 
     <nav
       id="nav-menu"
-      class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black
+      class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black z-10
             md:inline-block md:animate-none md:relative md:right-0 md:bg-primary-red"
       role="menu"
     >
@@ -84,29 +84,58 @@
   </header>
 
   <main>
-    <img
-      class="w-full aspect-auto"
-      src="./assets/mobile/image-hero.jpg"
-      width="375"
-      height="200"
-      alt=""
-    >
-
-    <h1 class="mt-14 mb-[15px] mx-auto font-extrabold text-[2.5rem] leading-10 max-w-mobile">
-      Branding & website design agency
-    </h1>
-
-    <p class="mb-10 mx-auto max-w-mobile font-normal text-base">
-      We specialize in visual storytelling by creating cohesive brand and website design 
-      solutions for small businesses, giving lasting impressions to audiences in a digital world.
-    </p>
+    <section class="relative sm:pt-[4.8125rem] sm:h-[37.875rem] lg:static lg:max-w-desktop lg:mx-auto lg:h-[50rem]">
+      <img
+        class="w-full aspect-auto sm:hidden"
+        src="./assets/mobile/image-hero.jpg"
+        width="375"
+        height="200"
+        alt=""
+      >
+      
+      <h1
+        class="mt-14 mb-[0.9375rem] mx-auto font-extrabold text-[2.5rem] leading-10 max-w-mobile
+              sm:mt-0 sm:mb-5 sm:ml-10 sm:max-w-[24.875rem] sm:text-[3.5rem] sm:leading-[3.5rem]
+              lg:mb-10 lg:max-w-[37.5rem] lg:text-[5rem] lg:leading-[5.5rem]
+              xl:mx-0"
+      >
+        Branding & website design agency
+      </h1>
   
-    <button
-      type="button"
-      class="block mb-24 ml-6 px-11 py-6 font-extrabold text-white bg-primary-red hover:bg-active-red focus:bg-active-red"
-    >
-      Learn More
-    </button>
+      <p
+        class="mb-10 mx-auto max-w-mobile font-normal text-base
+              sm:mb-8 sm:ml-10 sm:max-w-[24.875rem]
+              lg:mb-12 lg:max-w-[33.75rem] lg:text-base-desktop
+              xl:mx-0"
+      >
+        We specialize in visual storytelling by creating cohesive brand and website design 
+        solutions for small businesses, giving lasting impressions to audiences in a digital world.
+      </p>
+    
+      <button
+        type="button"
+        class="block mb-24 ml-6 px-11 py-6 font-extrabold text-white text-[1.125rem] leading-[1.375rem] bg-primary-red hover:bg-active-red focus:bg-active-red
+              sm:m-0 sm:ml-10 sm:px-10 sm:py-[1.5625rem] xl:mx-0"
+      >
+        Learn More
+      </button>
+
+      <img
+        class="hidden absolute z-[-1] top-0 right-0 sm:inline-block lg:hidden"
+        src="./assets/tablet/image-hero.jpg"
+        width="438"
+        height="606"
+        alt=""
+      >
+
+      <img
+        class="hidden absolute z-[-1] top-[11.125rem] right-0 lg:inline-block"
+        src="./assets/desktop/image-hero.jpg"
+        width="895"
+        height="800"
+        alt=""
+      >
+    </section>
   
     <section class="bg-primary-black text-white">
       <img

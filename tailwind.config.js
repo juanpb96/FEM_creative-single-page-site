@@ -24,7 +24,8 @@ module.exports = {
       fontSize: {
         base: ['15px', '25px'],
         'lg': ['32px', '40px'],
-        '2xl': ['80px', '88px']
+        '2xl': ['80px', '88px'],
+        'base-desktop': ['18px', '2rem']
       },
       keyframes: {
         'opacity-100': {
