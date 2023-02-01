@@ -137,12 +137,28 @@
       >
     </section>
   
-    <section class="bg-primary-black text-white">
+    <section class="relative bg-primary-black sm:max-h-[41.125rem]">
       <img
-        class="w-full aspect-auto"
+        class="w-full aspect-auto sm:hidden"
         src="./assets/mobile/image-strategic.jpg"
         width="375"
         height="200"
+        alt=""
+      >
+
+      <img
+        class="hidden absolute sm:inline-block xl:hidden"
+        src="./assets/tablet/image-strategic.jpg"
+        width="378"
+        height="658"
+        alt=""
+      >
+
+      <img
+        class="hidden absolute xl:inline-block"
+        src="./assets/desktop/image-strategic.jpg"
+        width="735"
+        height="984"
         alt=""
       >
 
@@ -152,27 +168,45 @@
         viewbox="0 0 135 61"
         xmlns="http://www.w3.org/2000/svg"
         role="presentation"
-        class="relative w-[63px] h-[29px] left-6 mt-[-0.875rem]"
+        class="relative w-[63px] h-[29px] left-6 mt-[-0.875rem]
+              sm:absolute sm:mt-0 sm:top-[9.0625rem] sm:left-[calc(378px-63px/2)]
+              xl:w-[135px] xl:h-[61px] xl:top-[14.625rem] xl:left-[calc(735px-135px/2)]"
       >
-        <path d="M98.882 60.408c10.951 0 19.618-4.864 25.999-14.593 6.38-9.728 9.571-23.054 9.571-39.977h-29.19c-.633 3.439-1.9 6.199-3.8 8.28-1.902 2.082-4.662 3.123-8.283 3.123-3.258 0-6.788-.86-10.59-2.58a354.773 354.773 0 01-12.354-5.905C65.8 6.54 60.89 4.594 55.505 2.92 50.119 1.245 44.214.408 37.787.408c-11.585 0-20.704 4.887-27.356 14.66C3.778 24.843.452 38.1.452 54.843h29.19c.633-3.348 2.059-6.063 4.276-8.144 2.218-2.082 5.182-3.123 8.893-3.123 3.077 0 6.471.838 10.182 2.512a437.483 437.483 0 0112.49 5.905c4.616 2.262 9.708 4.23 15.274 5.905 5.566 1.674 11.608 2.511 18.125 2.511z" fill="#F94F4F" fill-rule="nonzero"/>
+        <path
+          d="M98.882 60.408c10.951 0 19.618-4.864 25.999-14.593 6.38-9.728 9.571-23.054 9.571-39.977h-29.19c-.633 3.439-1.9 6.199-3.8 8.28-1.902 2.082-4.662 3.123-8.283 3.123-3.258 0-6.788-.86-10.59-2.58a354.773 354.773 0 01-12.354-5.905C65.8 6.54 60.89 4.594 55.505 2.92 50.119 1.245 44.214.408 37.787.408c-11.585 0-20.704 4.887-27.356 14.66C3.778 24.843.452 38.1.452 54.843h29.19c.633-3.348 2.059-6.063 4.276-8.144 2.218-2.082 5.182-3.123 8.893-3.123 3.077 0 6.471.838 10.182 2.512a437.483 437.483 0 0112.49 5.905c4.616 2.262 9.708 4.23 15.274 5.905 5.566 1.674 11.608 2.511 18.125 2.511z"
+          fill="#F94F4F"
+          fill-rule="nonzero"
+        />
       </svg>
 
-      <h2 class="mt-[3.625rem] mx-auto max-w-mobile text-lg font-extrabold">
-        <strong class="text-primary-red">Design</strong> is strategic.
-      </h2>
-
-      <blockquote class="mt-6 mb-10 mx-auto max-w-mobile text-base">
-        “A well-crafted design strategy consistently produces desired outcomes and brand awareness.
-        We are firm believers that success lies in creative collaboration with our clients.”
-      </blockquote>
-
-      <button
-        type="button"
-        class="mb-[4.5rem] ml-6 text-primary-red text-base leading-[1.125rem] font-extrabold hover:text-active-red focus:text-active-red"
+      <div class="pt-[3.625rem] bg-primary-black text-white
+                  sm:w-[calc(100%-378px)] sm:max-h-[41.125rem] sm:ml-auto sm:pl-[4.3125rem] sm:pr-10 sm:py-[7.5rem]
+                  lg:pl-[9.625rem] lg:pr-[6.625rem] xl:py-[12.5rem]
+                  xl:w-[calc(100%-735px)] xl:max-h-[61.5rem]"
       >
-        Schedule a Call
-        <div class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></div>
-      </button>
+        <h2 class="mx-auto max-w-mobile text-lg font-extrabold sm:m-0 sm:mb-8 sm:w-[10ch] lg:text-lg-desktop">
+          <strong class="text-primary-red">Design</strong> is strategic.
+        </h2>
+  
+        <blockquote
+          class="mt-6 mb-10 mx-auto max-w-mobile text-base
+                sm:max-w-none sm:m-0 sm:mb-8
+                lg:text-base-desktop lg:max-w-[27.8125rem]"
+        >
+          “A well-crafted design strategy consistently produces desired outcomes and brand awareness.
+          We are firm believers that success lies in creative collaboration with our clients.”
+        </blockquote>
+  
+        <button
+          type="button"
+          class="mb-[4.5rem] ml-6 text-primary-red text-base leading-[1.125rem] font-extrabold
+                hover:text-active-red focus:text-active-red
+                sm:m-0"
+        >
+          Schedule a Call
+          <div class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></div>
+        </button>
+      </div>
     </section>
   
     <section class="py-[6rem] bg-primary-red text-white">

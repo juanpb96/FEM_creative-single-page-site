@@ -25,7 +25,8 @@ module.exports = {
         base: ['15px', '25px'],
         'lg': ['32px', '40px'],
         '2xl': ['80px', '88px'],
-        'base-desktop': ['18px', '2rem']
+        'base-desktop': ['18px', '32px'],
+        'lg-desktop': ['56px', '64px']
       },
       keyframes: {
         'opacity-100': {
