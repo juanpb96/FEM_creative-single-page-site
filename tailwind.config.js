@@ -4,6 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'hero-gradient': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%);',
+        'design-gradient': 'linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 5%, rgba(255,255,255,0.3) 6%, rgb(255, 255, 255) 7%)',
         'image-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);'
       },
       colors: {
@@ -18,8 +20,9 @@ module.exports = {
         white: '#FFFFFF'
       },
       maxWidth: {
+        'primary': '1110px',
         'mobile': 'calc(100% - 24px * 2)',
-        'desktop': '1110px'
+        'desktop': '1440px'
       },
       fontSize: {
         base: ['15px', '25px'],
