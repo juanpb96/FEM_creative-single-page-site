@@ -267,9 +267,14 @@
       </ol>
     </section>    
   
-    <section class="bg-primary-black text-white" aria-roledescription="Carousel" aria-label="Our Projects">
-      <!-- TODO: Continue with https://www.w3.org/WAI/ARIA/apg/example-index/carousel/carousel-1-prev-next.html -->
-      <ul id="carousel" aria-live="polite">
+    <section
+      class="relative bg-primary-black text-white mx-auto
+            sm:flex sm:flex-row-reverse sm:max-w-[48rem] sm:h-[29.5rem] sm:bg-white
+            lg:h-[45.5rem] lg:max-w-desktop"
+      aria-roledescription="Carousel"
+      aria-label="Our Projects"
+    >
+      <ul id="carousel" aria-live="polite" class="sm:absolute md:min-w-[27.375rem]">
         <li
           role="group"
           aria-roledescription="slide"
@@ -277,19 +282,27 @@
           class="animate-opacity-100"
         >
           <figure class="relative">
-            <img
-              class="w-full aspect-auto"
-              src="./assets/mobile/image-slide-1.jpg"
-              alt=""
-            >
+            <picture>
+              <source media="(min-width: 1024px)" srcset="./assets/desktop/image-slide-1.jpg">
+              <source media="(min-width: 640px)" srcset="./assets/tablet/image-slide-1.jpg">
+              <img
+                class="w-full aspect-auto"
+                src="./assets/mobile/image-slide-1.jpg"
+                alt=""
+              >
+            </picture>
 
-            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
-              <strong class="font-extrabold">Lean Product Roadmap</strong>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
+                    sm:px-10 sm:11
+                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
+            >
+              <strong class="font-extrabold lg:text-[1.25rem]">Lean Product Roadmap</strong>
               2019 Project
             </figcaption>
           </figure>
 
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
             Brand naming & guidelines
           </h2>
         </li>
@@ -301,19 +314,27 @@
           class="hidden animate-opacity-100"
         >
           <figure class="relative">
-            <img
-              class="w-full aspect-auto"
-              src="./assets/mobile/image-slide-2.jpg"
-              alt=""
-            >
+            <picture>
+              <source media="(min-width: 1024px)" srcset="./assets/desktop/image-slide-2.jpg">
+              <source media="(min-width: 640px)" srcset="./assets/tablet/image-slide-2.jpg">
+              <img
+                class="w-full aspect-auto"
+                src="./assets/mobile/image-slide-2.jpg"
+                alt=""
+              >
+            </picture>
 
-            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
-              <strong class="font-extrabold">New Majestic Hotel</strong>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
+                    sm:px-10 sm:11
+                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
+            >
+              <strong class="font-extrabold lg:text-[1.25rem]">New Majestic Hotel</strong>
               2018 Project
             </figcaption>
           </figure>
 
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
             Brand identity & merchandise
           </h2>
         </li>
@@ -325,54 +346,106 @@
           class="hidden animate-opacity-100"
         >
           <figure class="relative">
-            <img
-              class="w-full aspect-auto"
-              src="./assets/mobile/image-slide-3.jpg"
-              alt=""
-            >
+            <picture>
+              <source media="(min-width: 1024px)" srcset="./assets/desktop/image-slide-3.jpg">
+              <source media="(min-width: 640px)" srcset="./assets/tablet/image-slide-3.jpg">
+              <img
+                class="w-full aspect-auto"
+                src="./assets/mobile/image-slide-3.jpg"
+                alt=""
+              >
+            </picture>
 
-            <figcaption class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal">
-              <strong class="font-extrabold">Crypto Dashboard</strong>
+            <figcaption
+              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
+                    sm:px-10 sm:11
+                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
+            >
+              <strong class="font-extrabold lg:text-[1.25rem]">Crypto Dashboard</strong>
               2016 Project
             </figcaption>
           </figure>
 
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg">
+          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
             Brand identity & web design
           </h2>
         </li>
 
       </ul>
 
-      <div id="carousel-controls" class="flex gap-4 pb-16 ml-6 max-w-mobile">
-        <button
-          aria-controls="carousel"
-          aria-label="Previous Slide"
-          type="button"
-          class="text-primary-red hover:text-active-red focus:text-active-red"
-        >
-          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
-            <g transform="matrix(-1 0 0 1 40 0)" stroke="currentColor" fill="none" fill-rule="evenodd">
-              <circle cx="20" cy="20" r="19.5"/>
-              <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
-            </g>
-          </svg>
-        </button>
+      <div
+        class="relative bg-primary-black max-h-[22rem]
+              sm:max-w-[390px] sm:mr-auto sm:px-10 sm:py-[6.25rem]
+              lg:max-w-[735px] lg:max-h-[33rem] lg:pl-[10.3125rem] lg:pr-[7.8125rem] lg:py-[9.5rem]"
+      >
+        <div
+          class="hidden absolute inset-y-0 z-[-1] bg-primary-black
+                md:block md:w-[calc(100vw+390px)] md:left-[-390px]
+                lg:w-[calc(100vw+735px)] lg:left-[-735px]"
+          role="presentation"
+        ></div>
 
-        <button
-          aria-controls="carousel"
-          aria-label="Next Slide"
-          type="button"
-          class="text-primary-red hover:text-active-red focus:text-active-red"
+        <svg
+          width="134"
+          height="60"
+          viewbox="0 0 134 60"
+          xmlns="http://www.w3.org/2000/svg"
+          role="presentation"
+          class="hidden absolute w-[63px] h-[29px] top-[7.875rem] right-[calc(-63px/2)] [transform:rotateY(180deg)]
+                sm:block
+                lg:transform-none lg:w-[134px] lg:h-[60px] lg:top-[11.625rem] lg:right-[calc(-134px/2)]"
         >
-          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
-            <g stroke="currentColor" fill="none" fill-rule="evenodd">
-              <circle cx="20" cy="20" r="19.5"/>
-              <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
-            </g>
-          </svg>
-        </button>
+          <path
+            d="M98.43 0c10.951 0 19.618 4.864 25.999 14.593C130.809 24.32 134 37.647 134 54.57h-29.19c-.633-3.439-1.9-6.199-3.8-8.28-1.902-2.082-4.662-3.123-8.283-3.123-3.258 0-6.788.86-10.59 2.58a354.77 354.77 0 00-12.354 5.905c-4.435 2.217-9.345 4.162-14.73 5.837C49.667 59.163 43.762 60 37.335 60 25.75 60 16.631 55.113 9.98 45.34 3.326 35.565 0 22.307 0 5.565h29.19c.633 3.348 2.059 6.063 4.276 8.144 2.218 2.082 5.182 3.123 8.893 3.123 3.077 0 6.471-.838 10.182-2.512a437.497 437.497 0 0012.49-5.905c4.616-2.262 9.708-4.23 15.274-5.905C85.871.837 91.913 0 98.43 0z"
+            fill="#FFF"
+            fill-rule="nonzero"
+          />
+        </svg>
+
+        <ul id="brand-labels" class="hidden mb-8 font-extrabold text-lg sm:block lg:text-lg-desktop">
+          <li class="animate-opacity-100">
+            Brand naming & guidelines
+          </li>
+          <li class="animate-opacity-100 hidden">
+            Brand identity & merchandise
+          </li>
+          <li class="animate-opacity-100 hidden">
+            Brand identity & web design
+          </li>
+        </ul>
+
+        <div id="carousel-controls" class="flex gap-4 pb-16 ml-6 max-w-mobile sm:m-0 sm:p-0">
+          <button
+            aria-controls="carousel"
+            aria-label="Previous Slide"
+            type="button"
+            class="text-primary-red hover:text-active-red focus:text-active-red"
+          >
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <g transform="matrix(-1 0 0 1 40 0)" stroke="currentColor" fill="none" fill-rule="evenodd">
+                <circle cx="20" cy="20" r="19.5"/>
+                <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+              </g>
+            </svg>
+          </button>
+  
+          <button
+            aria-controls="carousel"
+            aria-label="Next Slide"
+            type="button"
+            class="text-primary-red hover:text-active-red focus:text-active-red"
+          >
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <g stroke="currentColor" fill="none" fill-rule="evenodd">
+                <circle cx="20" cy="20" r="19.5"/>
+                <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
+
+
     </section>
     
     <footer class="py-[6.25rem] mx-auto max-w-mobile">

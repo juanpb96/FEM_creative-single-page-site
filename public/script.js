@@ -56,6 +56,7 @@ navMenu.addEventListener('animationend', () => {
 
 const carousel = document.getElementById('carousel');
 const carouselLength = carousel.children.length;
+const carouselBrands = document.getElementById('brand-labels');
 let currentSlide = 0;
 
 const carouselControls = document.getElementById('carousel-controls');
@@ -65,6 +66,7 @@ const nextButton = carouselControls.children[1];
 const changeCarouselSlide = (direction) => {
     return () => {
         carousel.children[currentSlide].classList.add('hidden');
+        carouselBrands.children[currentSlide].classList.add('hidden');
 
         if (currentSlide + direction < 0) {
             currentSlide = carouselLength - 1;
@@ -75,6 +77,7 @@ const changeCarouselSlide = (direction) => {
         }
 
         carousel.children[currentSlide].classList.remove('hidden');
+        carouselBrands.children[currentSlide].classList.remove('hidden');
     };
 };
 
