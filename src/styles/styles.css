@@ -47,3 +47,50 @@
     transform: rotate(-90deg);
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply block px-11 py-6 text-[1rem] leading-[1.25rem] font-extrabold text-white bg-primary-red
+          hover:bg-active-red focus:bg-active-red transition-[background-color];
+  }
+
+  .nav-item {
+    @apply cursor-pointer hover:opacity-70 focus:opacity-70 transition-opacity
+          md:hover:opacity-100 md:focus:opacity-100 md:transition-none
+          md:hover:font-extrabold md:focus:font-extrabold;
+  }
+
+  .nav-item-hidden-text {
+    @apply hidden md:block md:font-extrabold md:h-0 md:overflow-hidden;
+  }
+
+  .full-screen-black-bar {
+    @apply hidden absolute w-screen-absolute right-screen-center bg-primary-black z-[-1] md:block;
+  }
+
+  .list-item {
+    @apply relative pt-11 pl-4 lg:pl-[3.625rem];
+  }
+
+  .list-item-title {
+    @apply text-base font-extrabold lg:text-[1.25rem] lg:leading-8;
+  }
+
+  .list-item-number {
+    @apply absolute top-0 left-0 text-2xl opacity-25;
+  }
+
+  .list-item-content {
+    @apply mt-4 text-base font-normal md:max-w-[38ch] lg:min-w-[22ch] lg:mt-6 lg:text-base-desktop;
+  }
+
+  .slide-caption {
+    @apply absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal 
+          sm:px-10 sm:py-11
+          lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop;
+  }
+
+  .slide-control {
+    @apply text-primary-red hover:text-active-red focus:text-active-red;
+  }
+}

@@ -36,44 +36,40 @@
             md:inline-block md:animate-none md:relative md:right-0 md:bg-primary-red"
       role="menu"
     >
-      <div class="hidden inset-0 bg-primary-red z-[-1] w-screen lg:block lg:absolute"></div>
+      <div class="hidden inset-0 bg-primary-red z-[-1] w-screen lg:block lg:absolute" role="presentation"></div>
+
       <ul class="flex flex-col items-center gap-6 text-white pt-8 px-[1.625rem] pb-7 
                 md:flex-row md:gap-5 md:py-[3.5625rem] md:pl-8 md:pr-10
                 lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-0">
         <li
           role="menuitem"
           tabindex="0"
-          class="cursor-pointer hover:opacity-70 focus:opacity-70
-                md:hover:opacity-100 md:focus:opacity-100
-                md:hover:font-extrabold md:focus:font-extrabold"
+          class="nav-item"
         >
           About
-          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">About</span>
+          <span aria-hidden="true" class="nav-item-hidden-text">About</span>
         </li>
         <li
           role="menuitem"
           tabindex="0"
-          class="cursor-pointer hover:opacity-70 focus:opacity-70
-                md:hover:opacity-100 md:focus:opacity-100
-                md:hover:font-extrabold md:focus:font-extrabold"
+          class="nav-item"
         >
           Service
-          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">Service</span>
+          <span aria-hidden="true" class="nav-item-hidden-text">Service</span>
         </li>
         <li
           role="menuitem"
           tabindex="0"
-          class="cursor-pointer hover:opacity-70 focus:opacity-70
-                md:hover:opacity-100 md:focus:opacity-100
-                md:hover:font-extrabold md:focus:font-extrabold"
+          class="nav-item"
         >
           Projects
-          <span aria-hidden="true" class="hidden md:block md:font-extrabold md:h-0 md:overflow-hidden">Projects</span>
+          <span aria-hidden="true" class="nav-item-hidden-text">Projects</span>
         </li>
         <li
-          class="cursor-pointer px-11 py-[1.375rem] font-extrabold bg-primary-red hover:bg-active-red focus:bg-active-red
-                md:ml-2 md:leading-5 md:px-[1.125rem] md:bg-primary-black md:hover:bg-active-black md:focus:bg-active-black
-                lg:px-11 lg:py-[1.375rem]"
+          class="btn-primary cursor-pointer py-[1.375rem]
+                md:ml-2 md:leading-5 md:px-[1.125rem] md:bg-primary-black
+                md:hover:bg-active-black md:focus:bg-active-black
+                lg:px-11"
           role="menuitem"
           tabindex="0"
         >
@@ -114,7 +110,7 @@
     
       <button
         type="button"
-        class="block mb-24 ml-6 px-11 py-6 font-extrabold text-white text-[1.125rem] leading-[1.375rem] bg-primary-red hover:bg-active-red focus:bg-active-red
+        class="btn-primary mb-24 ml-6 text-[1.125rem] leading-[1.375rem]
               sm:m-0 sm:ml-10 sm:px-10 sm:py-[1.5625rem] xl:mx-0"
       >
         Learn More
@@ -140,7 +136,13 @@
     </section>
   
     <!-- TODO: Remove gradient and use the same solution implemented in carousel section -->
-    <section class="relative bg-primary-black sm:max-h-[41.125rem] lg:max-h-[61.5rem] lg:max-w-desktop lg:mx-auto">
+    <section
+      class="relative bg-primary-black
+            sm:max-h-[41.125rem]
+            md:max-w-tablet md:mx-auto
+            lg:max-h-[61.5rem] lg:max-w-primary
+            xl:max-w-desktop"
+    >
       <!-- TODO: Refactor images to be included inside a <picture /> -->
       <img
         class="w-full aspect-auto sm:hidden"
@@ -166,8 +168,6 @@
         alt=""
       >
 
-      <div class="hidden absolute right-[calc(100%-100px)] h-[984px] w-full bg-design-gradient 2xl:block" role="presentation"></div>
-
       <svg
         width="135"
         height="61"
@@ -187,8 +187,8 @@
 
       <div class="pt-[3.625rem] bg-primary-black text-white
                   sm:w-[calc(100%-378px)] sm:max-h-[41.125rem] sm:ml-auto sm:pl-[4.3125rem] sm:pr-10 sm:py-[7.5rem]
-                  lg:pl-[9.625rem] lg:pr-[6.625rem] xl:py-[12.5rem]
-                  xl:w-[calc(100%-735px)] xl:max-h-[61.5rem]"
+                  lg:max-w-[705px] lg:pr-[6.625rem]
+                  xl:w-[calc(100%-735px)] xl:max-h-[61.5rem] xl:pl-[9.625rem] xl:py-[12.5rem] "
       >
         <h2 class="mx-auto max-w-mobile text-lg font-extrabold sm:m-0 sm:mb-8 sm:w-[10ch] lg:text-lg-desktop">
           <strong class="text-primary-red">Design</strong> is strategic.
@@ -213,7 +213,10 @@
           <div class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></div>
         </button>
 
-        <div class="hidden absolute inset-y-0 w-screen bg-primary-black z-[-1] xl:block" role="presentation"></div>
+        <div
+          class="full-screen-black-bar inset-y-0"
+          role="presentation"
+        ></div>
       </div>
     </section>
   
@@ -235,32 +238,32 @@
               lg:min-w-min lg:px-[6.625rem] lg:py-[12.5rem] lg:gap-14
               xl:min-w-[55.9375rem] xl:pl-[17.8125rem]"
       >
-        <li class="relative pt-11 pl-4 lg:pl-[3.625rem]">
-          <h3 class="text-base font-extrabold lg:text-[1.25rem] lg:leading-8">
-            <span class="absolute top-0 left-0 text-2xl opacity-25">01</span>
+        <li class="list-item">
+          <h3 class="list-item-title">
+            <span class="list-item-number">01</span>
             Brand strategy
           </h3>
-          <p class="mt-4 text-base font-normal md:max-w-[38ch] lg:min-w-[22ch] lg:mt-6 lg:text-base-desktop">
+          <p class="list-item-content">
             Brand strategy is critical for long-term success. Outshining competitors and capturing 
             the target audience are key.
           </p>
         </li>
-        <li class="relative pt-11 pl-4 lg:pl-[3.625rem]">
-          <h3 class="text-base font-extrabold lg:text-[1.25rem] lg:leading-8">
-            <span class="absolute top-0 left-0 text-2xl opacity-25">02</span>
+        <li class="list-item">
+          <h3 class="list-item-title">
+            <span class="list-item-number">02</span>
             Brand design
           </h3>
-          <p class="mt-4 text-base font-normal md:max-w-[38ch] lg:min-w-[22ch] lg:mt-6 lg:text-base-desktop">
+          <p class="list-item-content">
             Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
             value effectively.
           </p>
         </li>
-        <li class="relative pt-11 pl-4 lg:pl-[3.625rem]">
-          <h3 class="text-base font-extrabold lg:text-[1.25rem] lg:leading-8">
-            <span class="absolute top-0 left-0 text-2xl opacity-25">03</span>
+        <li class="list-item">
+          <h3 class="list-item-title">
+            <span class="list-item-number">03</span>
             Web design
           </h3>
-          <p class="mt-4 text-base font-normal md:max-w-[38ch] lg:min-w-[22ch] lg:mt-6 lg:text-base-desktop">
+          <p class="list-item-content">
             A beautifully crafted website is the best tool for brand awareness, and ultimately results 
             in increased revenues.
           </p>
@@ -271,7 +274,7 @@
   
     <section
       class="relative bg-primary-black text-white mx-auto
-            sm:flex sm:flex-row-reverse sm:max-w-[48rem] sm:h-[29.5rem] sm:bg-white
+            sm:flex sm:flex-row-reverse sm:max-w-tablet sm:h-[29.5rem] sm:bg-white
             lg:h-[45.5rem] lg:max-w-desktop"
       aria-roledescription="Carousel"
       aria-label="Our Projects"
@@ -294,19 +297,11 @@
               >
             </picture>
 
-            <figcaption
-              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
-                    sm:px-10 sm:11
-                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
-            >
+            <figcaption class="slide-caption">
               <strong class="font-extrabold lg:text-[1.25rem]">Lean Product Roadmap</strong>
               2019 Project
             </figcaption>
           </figure>
-
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
-            Brand naming & guidelines
-          </h2>
         </li>
         
         <li
@@ -326,19 +321,11 @@
               >
             </picture>
 
-            <figcaption
-              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
-                    sm:px-10 sm:11
-                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
-            >
+            <figcaption class="slide-caption">
               <strong class="font-extrabold lg:text-[1.25rem]">New Majestic Hotel</strong>
               2018 Project
             </figcaption>
           </figure>
-
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
-            Brand identity & merchandise
-          </h2>
         </li>
 
         <li
@@ -358,19 +345,11 @@
               >
             </picture>
 
-            <figcaption
-              class="absolute inset-x-0 bottom-0 px-8 py-9 flex flex-col text-right text-base bg-image-gradient mix-blend-normal
-                    sm:px-10 sm:11
-                    lg:px-[9.625rem] lg:py-[4.25rem] lg:text-base-desktop"
-            >
+            <figcaption class="slide-caption">
               <strong class="font-extrabold lg:text-[1.25rem]">Crypto Dashboard</strong>
               2016 Project
             </figcaption>
           </figure>
-
-          <h2 class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg sm:hidden">
-            Brand identity & web design
-          </h2>
         </li>
 
       </ul>
@@ -380,13 +359,6 @@
               sm:max-w-[390px] sm:mr-auto sm:px-10 sm:py-[6.25rem]
               lg:max-w-[735px] lg:max-h-[33rem] lg:pl-[10.3125rem] lg:pr-[7.8125rem] lg:py-[9.5rem]"
       >
-        <div
-          class="hidden absolute inset-y-0 z-[-1] bg-primary-black
-                md:block md:w-[calc(100vw+390px)] md:left-[-390px]
-                lg:w-[calc(100vw+735px)] lg:left-[-735px]"
-          role="presentation"
-        ></div>
-
         <svg
           width="134"
           height="60"
@@ -404,7 +376,11 @@
           />
         </svg>
 
-        <ul id="brand-labels" class="hidden mb-8 font-extrabold text-lg sm:block lg:text-lg-desktop">
+        <ul
+          id="brand-labels"
+          class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg
+                sm:block sm:m-0 sm:mb-8 sm:p-0 sm:max-w-[16ch] lg:text-lg-desktop"
+        >
           <li class="animate-opacity-100">
             Brand naming & guidelines
           </li>
@@ -421,7 +397,7 @@
             aria-controls="carousel"
             aria-label="Previous Slide"
             type="button"
-            class="text-primary-red hover:text-active-red focus:text-active-red"
+            class="slide-control"
           >
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
               <g transform="matrix(-1 0 0 1 40 0)" stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -435,7 +411,7 @@
             aria-controls="carousel"
             aria-label="Next Slide"
             type="button"
-            class="text-primary-red hover:text-active-red focus:text-active-red"
+            class="slide-control"
           >
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="presentation">
               <g stroke="currentColor" fill="none" fill-rule="evenodd">
@@ -447,7 +423,10 @@
         </div>
       </div>
 
-
+      <div
+        class="full-screen-black-bar h-[22rem] lg:h-[33rem]"
+        role="presentation"
+      ></div>
     </section>
     
     <footer
@@ -461,7 +440,7 @@
 
       <button
         type="button"
-        class="block px-11 py-6 text-[1rem] leading-[1.25rem] font-extrabold text-white bg-primary-red hover:bg-active-red focus:bg-active-red"
+        class="btn-primary"
       >
         Schedule a Call
       </button>

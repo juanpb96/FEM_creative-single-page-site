@@ -19,10 +19,17 @@ module.exports = {
         },
         white: '#FFFFFF'
       },
+      width: {
+        'screen-absolute': 'calc(100vw + 23px)' 
+      },
       maxWidth: {
         'primary': '1110px',
         'mobile': 'calc(100% - 24px * 2)',
+        'tablet': '768px',
         'desktop': '1440px'
+      },
+      spacing: {
+        'screen-center': 'calc(-50vw + 50%)'
       },
       fontSize: {
         base: ['15px', '25px'],
