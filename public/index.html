@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a solution to the Creative agency single page site challenge on Frontend Mentor - Author: Juan Bonilla">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
@@ -12,7 +13,7 @@
 </head>
 <body class="overflow-x-hidden">
   <header class="flex justify-between items-center max-w-primary mx-auto relative px-6 py-10 md:p-0 md:pl-10 xl:p-0">
-    <img src="./assets/desktop/logo.svg" alt="">
+    <img src="./assets/desktop/logo.svg" width="161" height="30" alt="">
 
     <button
       type="button"
@@ -23,10 +24,10 @@
       aria-expanded="false"
     >
       <span class="hamburger-box" role="presentation">
-        <div class="hamburger-inner relative w-6 h-0.5 bg-black opacity-50">
-          <div class="absolute top-[-6px] w-6 h-0.5 bg-black"></div>
-          <div class="absolute bottom-[-6px] w-6 h-0.5 bg-black"></div>
-        </div>
+        <span class="block hamburger-inner relative w-6 h-0.5 bg-black opacity-50">
+          <span class="block absolute top-[-6px] w-6 h-0.5 bg-black"></span>
+          <span class="block absolute bottom-[-6px] w-6 h-0.5 bg-black"></span>
+        </span>
       </span>
     </button>
 
@@ -34,13 +35,15 @@
       id="nav-menu"
       class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black z-10
             md:inline-block md:animate-none md:relative md:right-0 md:bg-primary-red"
-      role="menu"
     >
       <div class="hidden inset-0 bg-primary-red z-[-1] w-screen lg:block lg:absolute" role="presentation"></div>
 
-      <ul class="flex flex-col items-center gap-6 text-white pt-8 px-[1.625rem] pb-7 
-                md:flex-row md:gap-5 md:py-[3.5625rem] md:pl-8 md:pr-10
-                lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-0">
+      <ul
+        class="flex flex-col items-center gap-6 text-white pt-8 px-[1.625rem] pb-7 
+              md:flex-row md:gap-5 md:py-[3.5625rem] md:pl-8 md:pr-10
+              lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-0"
+        role="menu"
+      >
         <li
           role="menuitem"
           tabindex="0"
@@ -81,14 +84,22 @@
 
   <main>
     <section class="relative max-w-primary sm:pt-[4.8125rem] sm:h-[37.875rem] lg:static lg:mx-auto lg:h-[50rem] xl:relative">
-      <img
-        class="w-full aspect-auto sm:hidden"
-        src="./assets/mobile/image-hero.jpg"
-        width="375"
-        height="200"
-        alt=""
-      >
-      
+      <picture>
+        <source media="(min-width: 1024px)" srcset="./assets/desktop/image-hero.jpg">
+        <source media="(min-width: 640px)" srcset="./assets/tablet/image-hero.jpg">
+        <img
+          class="w-full aspect-auto
+                sm:w-auto sm:absolute sm:z-[-1] sm:top-0 sm:right-0
+                lg:top-[11.125rem]
+                xl:top-0 xl:right-[-165px]"
+          src="./assets/mobile/image-hero.jpg"
+          sizes="(min-width: 1024px) 895px,
+                (min-width: 640px) 438px,
+                375px"
+          alt=""
+        >
+      </picture>     
+
       <h1
         class="mt-14 mb-[0.9375rem] mx-auto font-extrabold text-[2.5rem] leading-10 max-w-mobile
               sm:mt-0 sm:mb-5 sm:ml-10 sm:max-w-[24.875rem] sm:text-[3.5rem] sm:leading-[3.5rem]
@@ -116,26 +127,9 @@
         Learn More
       </button>
 
-      <img
-        class="hidden absolute z-[-1] top-0 right-0 sm:inline-block lg:hidden"
-        src="./assets/tablet/image-hero.jpg"
-        width="438"
-        height="606"
-        alt=""
-      >
-
-      <img
-        class="hidden absolute z-[-1] top-[11.125rem] right-0 lg:inline-block xl:top-0 xl:right-[-165px]"
-        src="./assets/desktop/image-hero.jpg"
-        width="895"
-        height="800"
-        alt=""
-      >
-
       <div class="hidden absolute left-full inset-y-0 w-full bg-hero-gradient 2xl:block" role="presentation"></div>
     </section>
   
-    <!-- TODO: Remove gradient and use the same solution implemented in carousel section -->
     <section
       class="relative bg-primary-black
             sm:max-h-[41.125rem]
@@ -143,30 +137,19 @@
             lg:max-h-[61.5rem] lg:max-w-primary
             xl:max-w-desktop"
     >
-      <!-- TODO: Refactor images to be included inside a <picture /> -->
-      <img
-        class="w-full aspect-auto sm:hidden"
-        src="./assets/mobile/image-strategic.jpg"
-        width="375"
-        height="200"
-        alt=""
-      >
-
-      <img
-        class="hidden absolute sm:inline-block xl:hidden"
-        src="./assets/tablet/image-strategic.jpg"
-        width="378"
-        height="658"
-        alt=""
-      >
-
-      <img
-        class="hidden absolute xl:inline-block"
-        src="./assets/desktop/image-strategic.jpg"
-        width="735"
-        height="984"
-        alt=""
-      >
+      <picture>
+        <source media="(min-width: 1280px)" srcset="./assets/desktop/image-strategic.jpg">
+        <source media="(min-width: 640px)" srcset="./assets/tablet/image-strategic.jpg">
+        <img
+          class="w-full aspect-auto sm:absolute sm:w-auto"
+          src="./assets/mobile/image-strategic.jpg"
+          width="375"
+          sizes="(min-width: 1280px) 735px,
+                (min-width: 640px) 378px,
+                375px"
+          alt=""
+        >
+      </picture>
 
       <svg
         width="135"
@@ -210,7 +193,7 @@
                 sm:m-0"
         >
           Schedule a Call
-          <div class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></div>
+          <span class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></span>
         </button>
 
         <div
@@ -240,7 +223,7 @@
       >
         <li class="list-item">
           <h3 class="list-item-title">
-            <span class="list-item-number">01</span>
+            <span class="list-item-number" aria-hidden="true">01</span>
             Brand strategy
           </h3>
           <p class="list-item-content">
@@ -250,7 +233,7 @@
         </li>
         <li class="list-item">
           <h3 class="list-item-title">
-            <span class="list-item-number">02</span>
+            <span class="list-item-number" aria-hidden="true">02</span>
             Brand design
           </h3>
           <p class="list-item-content">
@@ -260,7 +243,7 @@
         </li>
         <li class="list-item">
           <h3 class="list-item-title">
-            <span class="list-item-number">03</span>
+            <span class="list-item-number" aria-hidden="true">03</span>
             Web design
           </h3>
           <p class="list-item-content">
@@ -276,15 +259,15 @@
       class="relative bg-primary-black text-white mx-auto
             sm:flex sm:flex-row-reverse sm:max-w-tablet sm:h-[29.5rem] sm:bg-white
             lg:h-[45.5rem] lg:max-w-desktop"
-      aria-roledescription="Carousel"
-      aria-label="Our Projects"
     >
-      <ul id="carousel" aria-live="polite" class="sm:absolute md:min-w-[27.375rem]">
-        <li
+      <h2 class="sr-only">Our Projects - Carousel</h2>
+
+      <div id="carousel" aria-live="polite" class="sm:absolute md:min-w-[27.375rem]">
+        <div
+          class="animate-opacity-100"
           role="group"
           aria-roledescription="slide"
           aria-label="1 of 3"
-          class="animate-opacity-100"
         >
           <figure class="relative">
             <picture>
@@ -293,6 +276,9 @@
               <img
                 class="w-full aspect-auto"
                 src="./assets/mobile/image-slide-1.jpg"
+                sizes="(min-width: 1024px) 895px,
+                      (min-width: 640px) 438px,
+                      375px"
                 alt=""
               >
             </picture>
@@ -302,13 +288,13 @@
               2019 Project
             </figcaption>
           </figure>
-        </li>
-        
-        <li
+        </div>
+
+        <div
+          class="hidden animate-opacity-100"
           role="group"
           aria-roledescription="slide"
           aria-label="2 of 3"
-          class="hidden animate-opacity-100"
         >
           <figure class="relative">
             <picture>
@@ -317,6 +303,9 @@
               <img
                 class="w-full aspect-auto"
                 src="./assets/mobile/image-slide-2.jpg"
+                sizes="(min-width: 1024px) 895px,
+                      (min-width: 640px) 438px,
+                      375px"
                 alt=""
               >
             </picture>
@@ -326,13 +315,13 @@
               2018 Project
             </figcaption>
           </figure>
-        </li>
+        </div>
 
-        <li
+        <div
+          class="hidden animate-opacity-100"
           role="group"
           aria-roledescription="slide"
           aria-label="3 of 3"
-          class="hidden animate-opacity-100"
         >
           <figure class="relative">
             <picture>
@@ -341,6 +330,9 @@
               <img
                 class="w-full aspect-auto"
                 src="./assets/mobile/image-slide-3.jpg"
+                sizes="(min-width: 1024px) 895px,
+                      (min-width: 640px) 438px,
+                      375px"
                 alt=""
               >
             </picture>
@@ -350,9 +342,8 @@
               2016 Project
             </figcaption>
           </figure>
-        </li>
-
-      </ul>
+        </div>
+      </div>
 
       <div
         class="relative bg-primary-black max-h-[22rem]
@@ -376,21 +367,21 @@
           />
         </svg>
 
-        <ul
+        <div
           id="brand-labels"
           class="pt-16 mb-6 mx-auto max-w-mobile font-extrabold text-lg
                 sm:block sm:m-0 sm:mb-8 sm:p-0 sm:max-w-[16ch] lg:text-lg-desktop"
         >
-          <li class="animate-opacity-100">
+          <div class="animate-opacity-100" role="group" aria-roledescription="slide title">
             Brand naming & guidelines
-          </li>
-          <li class="animate-opacity-100 hidden">
+          </div>
+          <div class="animate-opacity-100 hidden" role="group" aria-roledescription="slide title">
             Brand identity & merchandise
-          </li>
-          <li class="animate-opacity-100 hidden">
+          </div>
+          <div class="animate-opacity-100 hidden" role="group" aria-roledescription="slide title">
             Brand identity & web design
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <div id="carousel-controls" class="flex gap-4 pb-16 ml-6 max-w-mobile sm:m-0 sm:p-0">
           <button

@@ -776,6 +776,18 @@ html {
   color: rgba(255, 147, 147, var(--tw-text-opacity));
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .absolute{
   position: absolute;
 }
@@ -903,6 +915,10 @@ html {
 
 .mb-12{
   margin-bottom: 3rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -1231,6 +1247,18 @@ html {
     left: calc(378px - 63px / 2);
   }
 
+  .sm\:top-0{
+    top: 0px;
+  }
+
+  .sm\:right-0{
+    right: 0px;
+  }
+
+  .sm\:z-\[-1\]{
+    z-index: -1;
+  }
+
   .sm\:m-0{
     margin: 0px;
   }
@@ -1285,6 +1313,10 @@ html {
 
   .sm\:max-h-\[41\.125rem\]{
     max-height: 41.125rem;
+  }
+
+  .sm\:w-auto{
+    width: auto;
   }
 
   .sm\:w-\[calc\(100\%-378px\)\]{
@@ -1578,6 +1610,14 @@ html {
 
   .lg\:right-\[calc\(-134px\/2\)\]{
     right: calc(-134px / 2);
+  }
+
+  .lg\:top-\[11\.125rem\]{
+    top: 11.125rem;
+  }
+
+  .lg\:right-0{
+    right: 0px;
   }
 
   .lg\:z-10{
