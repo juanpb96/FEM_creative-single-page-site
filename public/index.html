@@ -12,8 +12,20 @@
   <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body class="overflow-x-hidden">
-  <header class="flex justify-between items-center max-w-primary mx-auto relative px-6 py-10 md:p-0 md:pl-10 xl:p-0">
+  <header
+    class="flex justify-between items-center max-w-primary mx-auto relative px-6 py-10
+          md:static md:p-0 md:pl-10
+          lg:max-w-desktop
+          xl:pl-[165px]"
+  >
     <img src="./assets/desktop/logo.svg" width="161" height="30" alt="">
+
+    <div
+      class="hidden absolute right-0 z-[-1] w-[calc(50vw-1110px/2)] h-[11.125rem] bg-primary-red
+            lg:block
+            xl:w-[calc(50vw-1440px/2)]"
+      role="presentation"
+    ></div>
 
     <button
       type="button"
@@ -36,12 +48,10 @@
       class="hidden animate-opacity-100 absolute top-full right-6 bg-primary-black z-10
             md:inline-block md:animate-none md:relative md:right-0 md:bg-primary-red"
     >
-      <div class="hidden inset-0 bg-primary-red z-[-1] w-screen lg:block lg:absolute" role="presentation"></div>
-
       <ul
         class="flex flex-col items-center gap-6 text-white pt-8 px-[1.625rem] pb-7 
               md:flex-row md:gap-5 md:py-[3.5625rem] md:pl-8 md:pr-10
-              lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-0"
+              lg:gap-8 lg:pt-14 lg:pb-[3.625rem] lg:pl-[4.3125rem] lg:text-[1rem] lg:leading-[2rem] xl:pr-[165px]"
         role="menu"
       >
         <li
@@ -83,22 +93,30 @@
   </header>
 
   <main>
-    <section class="relative max-w-primary sm:pt-[4.8125rem] sm:h-[37.875rem] lg:static lg:mx-auto lg:h-[50rem] xl:relative">
+    <section
+      class="relative max-w-primary mx-auto
+            sm:pt-[4.8125rem] sm:h-[37.875rem]
+            md:static md:max-w-tablet
+            lg:max-w-desktop lg:h-[50rem]
+            xl:px-[165px] xl:relative"
+    >
       <picture>
         <source media="(min-width: 1024px)" srcset="./assets/desktop/image-hero.jpg">
         <source media="(min-width: 640px)" srcset="./assets/tablet/image-hero.jpg">
         <img
           class="w-full aspect-auto
                 sm:w-auto sm:absolute sm:z-[-1] sm:top-0 sm:right-0
-                lg:top-[11.125rem]
-                xl:top-0 xl:right-[-165px]"
+                md:top-[11.125rem]
+                xl:top-0"
           src="./assets/mobile/image-hero.jpg"
           sizes="(min-width: 1024px) 895px,
                 (min-width: 640px) 438px,
                 375px"
           alt=""
         >
-      </picture>     
+      </picture>
+
+      <div class="hidden absolute right-0 inset-y-0 w-[200px] bg-hero-gradient 2xl:block" role="presentation"></div>
 
       <h1
         class="mt-14 mb-[0.9375rem] mx-auto font-extrabold text-[2.5rem] leading-10 max-w-mobile
@@ -126,8 +144,6 @@
       >
         Learn More
       </button>
-
-      <div class="hidden absolute left-full inset-y-0 w-full bg-hero-gradient 2xl:block" role="presentation"></div>
     </section>
   
     <section
@@ -193,7 +209,7 @@
                 sm:m-0"
         >
           Schedule a Call
-          <span class="mt-2.5 w-full h-0.5 bg-current" role="presentation"></span>
+          <span class="inline-block mt-2.5 w-full h-0.5 bg-current" role="presentation"></span>
         </button>
 
         <div
@@ -203,7 +219,12 @@
       </div>
     </section>
   
-    <section class="pt-[6rem] bg-primary-red text-white max-w-desktop sm:pt-0 md:flex md:bg-white xl:mx-auto">
+    <section
+      class="pt-[6rem] bg-primary-red text-white max-w-desktop
+            sm:pt-0
+            md:flex md:max-w-tablet md:mx-auto md:bg-white
+            lg:max-w-desktop"
+    >
       <h2
         class="px-6 max-w-[16ch] font-extrabold text-lg
               sm:pt-[18.8%] sm:pl-10 sm:pr-2.5
@@ -251,7 +272,12 @@
             in increased revenues.
           </p>
         </li>
-        <li class="hidden absolute inset-y-0 w-screen z-[-1] bg-primary-red md:block" role="presentation"></li>
+        <li
+          class="hidden absolute inset-y-0 w-[calc(50vw-768px/2)] right-[calc((50vw-768px/2)*-1)] bg-primary-red
+                md:block
+                lg:w-[calc(50vw-1440px/2)] lg:right-[calc((50vw-1440px/2)*-1)]"
+          role="presentation"
+        ></li>
       </ol>
     </section>    
   
@@ -423,7 +449,9 @@
     <footer
       class="py-[6.25rem] mx-auto max-w-mobile
             sm:flex sm:justify-between sm:items-center sm:max-w-desktop sm:px-10 sm:pt-[4.375rem]
-            lg:relative lg:px-[10.3125rem] lg:pt-[7.5rem] lg:pb-[7.1875rem]"
+            md:max-w-tablet
+            lg:relative lg:max-w-desktop lg:px-20 lg:pt-[7.5rem] lg:pb-[7.1875rem]
+            xl:px-[10.3125rem]"
     >
       <h2 class="max-w-[16ch] mb-12 font-extrabold text-lg sm:m-0 lg:text-lg-desktop">
         Let's build something great together.

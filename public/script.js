@@ -1,5 +1,3 @@
-// FIXME: Try to compile or minify
-
 const hamburgerButton = document.getElementsByClassName('hamburger')[0];
 const navMenu = document.getElementById('nav-menu');
 

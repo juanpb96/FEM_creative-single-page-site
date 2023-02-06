@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%);',
+        'hero-gradient': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, .1) 15%, rgba(255, 255, 255, .4) 80%, rgba(255, 255, 255, 1) 100%)',
         'design-gradient': 'linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 5%, rgba(255,255,255,0.3) 6%, rgb(255, 255, 255) 7%)',
         'image-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);'
       },
