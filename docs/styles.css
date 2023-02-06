@@ -821,12 +821,12 @@ html {
   right: 1.5rem;
 }
 
-.left-full{
-  left: 100%;
-}
-
 .left-6{
   left: 1.5rem;
+}
+
+.right-\[calc\(\(50vw-768px\/2\)\*-1\)\]{
+  right: calc((50vw - 768px / 2) * -1);
 }
 
 .top-\[7\.875rem\]{
@@ -839,10 +839,6 @@ html {
 
 .left-\[calc\(-134px\/2\)\]{
   left: calc(-134px / 2);
-}
-
-.right-\[calc\(\(50vw-768px\/2\)\*-1\)\]{
-  right: calc((50vw - 768px / 2) * -1);
 }
 
 .z-\[-1\]{
@@ -974,24 +970,20 @@ html {
   width: 100%;
 }
 
-.w-\[63px\]{
-  width: 63px;
-}
-
-.w-screen{
-  width: 100vw;
-}
-
-.w-\[134px\]{
-  width: 134px;
-}
-
 .w-\[200px\]{
   width: 200px;
 }
 
+.w-\[63px\]{
+  width: 63px;
+}
+
 .w-\[calc\(50vw-768px\/2\)\]{
   width: calc(50vw - 768px / 2);
+}
+
+.w-\[134px\]{
+  width: 134px;
 }
 
 .max-w-primary{
@@ -1585,16 +1577,16 @@ html {
     position: relative;
   }
 
+  .lg\:right-\[calc\(\(50vw-1440px\/2\)\*-1\)\]{
+    right: calc((50vw - 1440px / 2) * -1);
+  }
+
   .lg\:top-\[11\.625rem\]{
     top: 11.625rem;
   }
 
   .lg\:right-\[calc\(-134px\/2\)\]{
     right: calc(-134px / 2);
-  }
-
-  .lg\:right-\[calc\(\(50vw-1440px\/2\)\*-1\)\]{
-    right: calc((50vw - 1440px / 2) * -1);
   }
 
   .lg\:z-10{
@@ -1637,12 +1629,12 @@ html {
     max-height: 33rem;
   }
 
-  .lg\:w-\[134px\]{
-    width: 134px;
-  }
-
   .lg\:w-\[calc\(50vw-1440px\/2\)\]{
     width: calc(50vw - 1440px / 2);
+  }
+
+  .lg\:w-\[134px\]{
+    width: 134px;
   }
 
   .lg\:min-w-min{
