@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://www.frontendmentor.io/solutions/mobilefirst-tic-tac-toe-game-E-N1gc2LaW)
-- Live Site URL: [See live site here](https://juanbonilla.me/FEM_tic-tac-toe-game/)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/creative-single-page-site-using-tailwind-mPyJh9wh49)
+- Live Site URL: [See live site here](https://juanbonilla.me/FEM_creative-single-page-site/)
 
 ## My process
 
