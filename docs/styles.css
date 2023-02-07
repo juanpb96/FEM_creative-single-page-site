@@ -1601,6 +1601,10 @@ html {
     margin-bottom: 3rem;
   }
 
+  .lg\:mb-11{
+    margin-bottom: 2.75rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -1741,6 +1745,10 @@ html {
 
   .lg\:pb-\[7\.1875rem\]{
     padding-bottom: 7.1875rem;
+  }
+
+  .lg\:pt-\[7rem\]{
+    padding-top: 7rem;
   }
 
   .lg\:text-\[1rem\]{
